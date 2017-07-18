@@ -28,9 +28,25 @@ Don't forget to configure your Cucumber/Capybara to use Chrome as a driver.
 First install it locally to run your test-suite:
 
 ```bash
-$ sudo apt-get install chromium-chromedriver
-$ sudo ln -s /usr/lib/chromium-browser/chromedriver /usr/bin/chromedriver
-$ chromedriver -v
+# add Google public key
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
+# add Google Chrome stable repository to sources
+echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list
+sudo apt-get update 
+# install Chrome and it's driver
+sudo apt-get install google-chrome-stable chromium-chromedriver
+sudo ln -s /usr/lib/chromium-browser/chromedriver /usr/bin/chromedriver
+# check if all is OK
+chromedriver -v
+```
+
+Add gem `selenium-webdriver` to your `Gemfile`:
+
+```ruby
+group :test do
+  # ...
+  gem 'selenium-webdriver'
+end
 ```
 
 And then edit `features/support/env.rb` (or other config file):
@@ -50,6 +66,8 @@ Capybara.javascript_driver = :headless_chrome
 
 # ...
 ```
+
+That's all. Run `bin/cucumber` to check your tests.
 
 ## License
 
