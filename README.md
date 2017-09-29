@@ -9,7 +9,7 @@ Can be used for Continuous Integration or Delivery (CI/CD) pipelines (like GitLa
 ```yaml
 cucumber:
   stage: test
-  image: 'gitlab.your-company-domain.com/group/project/ruby-chromedriver:2.32'
+  image: 'nbulai/ruby-chromedriver:latest'
   variables:
     RAILS_ENV: test
   script:
@@ -25,7 +25,7 @@ cucumber:
 
 Don't forget to configure your Cucumber/Capybara to use Chrome as a driver.
 
-First install it locally to run your test-suite:
+First install it locally to run your test-suite (if you will run tests on the dev machine):
 
 ```bash
 # add Google public key
