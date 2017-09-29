@@ -1,6 +1,6 @@
 # ruby-chromedriver
 
-Ruby 2.4, Chrome / Chrome driver (2.30), NodeJS on Docker for Capybara/Cucumber specs.
+Ruby 2.4, Chrome / Chrome driver, NodeJS on Docker for Capybara/Cucumber specs.
 
 Based on official Ruby 2.4 image and uses stable Chrome official repository. Uses X virtual framebuffer (Xvfb) for keycode conversions.
 
@@ -9,7 +9,7 @@ Can be used for Continuous Integration or Delivery (CI/CD) pipelines (like GitLa
 ```yaml
 cucumber:
   stage: test
-  image: 'gitlab.your-company-domain.com/group/project/ruby-chromedriver:2.30'
+  image: 'gitlab.your-company-domain.com/group/project/ruby-chromedriver:2.32'
   variables:
     RAILS_ENV: test
   script:

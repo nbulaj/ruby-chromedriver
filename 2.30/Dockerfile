@@ -14,7 +14,7 @@ RUN echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/so
 RUN apt-get update && apt-get -y install google-chrome-stable
 
 # Install Chrome driver
-RUN wget -O /tmp/chromedriver.zip http://chromedriver.storage.googleapis.com/2.30/chromedriver_linux64.zip \
+RUN wget -O /tmp/chromedriver.zip http://chromedriver.storage.googleapis.com/2.32/chromedriver_linux64.zip \
     && unzip /tmp/chromedriver.zip chromedriver -d /usr/bin/ \
     && chmod ugo+rx /usr/bin/chromedriver
 
