@@ -1,10 +1,18 @@
 # ruby-chromedriver
 
-Ruby 2.4, Chrome / Chrome driver, NodeJS on Docker for Capybara/Cucumber specs.
+[![Docker Pulls](https://img.shields.io/docker/pulls/nbulai/ruby-chromedriver.svg)](https://hub.docker.com/r/nbulai/ruby-chromedriver/)
+[![Docker Stars](https://img.shields.io/docker/stars/nbulai/ruby-chromedriver.svg)](https://hub.docker.com/r/nbulai/ruby-chromedriver/)
 
-Based on official Ruby 2.4 image and uses stable Chrome official repository. Uses X virtual framebuffer (Xvfb) for keycode conversions.
+Ruby 2.4, Chrome / [Chrome driver](https://sites.google.com/a/chromium.org/chromedriver/), NodeJS on 
+Docker for [Capybara](https://github.com/teamcapybara/capybara)/[Cucumber](https://github.com/cucumber/cucumber) specs.
+
+Based on official Ruby 2.4 image and uses official stable Chrome repository. Uses X virtual framebuffer (Xvfb) for keycode conversions.
 
 Can be used for Continuous Integration or Delivery (CI/CD) pipelines (like GitLab) instead of Qt and PhantomJS:
+
+# Configuration
+
+GitLab CI configuration for Ruby on Rails project + Cucumber using the image:
 
 ```yaml
 cucumber:
@@ -73,4 +81,4 @@ That's all. Run `bin/cucumber` to check your tests.
 
 This repo content is released under the [MIT License](http://www.opensource.org/licenses/MIT).
 
-Copyright (c) 2017 Nikita Bulai (bulajnikita@gmail.com).
+Copyright (c) 2017-2018 Nikita Bulai (bulajnikita@gmail.com).
