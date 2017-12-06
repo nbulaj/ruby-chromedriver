@@ -3,7 +3,7 @@ FROM ruby:2.4-slim
 MAINTAINER Nikita Bulai <bulaj.nikita@gmail.com>
 
 ENV DEBIAN_FRONTEND noninteractive
-ENV CHROMIUM_DRIVER_VERSION 2.30
+ENV CHROMIUM_DRIVER_VERSION 2.33
 
 # Install dependencies & Chrome
 RUN apt-get update && apt-get -y --no-install-recommends install wget xvfb unzip libgconf2-4 libnss3 nodejs \
