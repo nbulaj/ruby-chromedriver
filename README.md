@@ -64,7 +64,9 @@ And then edit `features/support/env.rb` (or other config file):
 
 Capybara.register_driver(:headless_chrome) do |app|
   capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(
-    chromeOptions: { args: %w[headless disable-gpu] }
+    # Add 'no-sandbox' arg if you have an "unknown error: Chrome failed to start: exited abnormally"
+    # @see https://github.com/SeleniumHQ/selenium/issues/4961
+    chromeOptions: { args: %w[headless disable-gpu] } 
   )
 
   Capybara::Selenium::Driver.new(app, browser: :chrome, desired_capabilities: capabilities)
