@@ -3,10 +3,10 @@
 [![Docker Pulls](https://img.shields.io/docker/pulls/nbulai/ruby-chromedriver.svg)](https://hub.docker.com/r/nbulai/ruby-chromedriver/)
 [![Docker Stars](https://img.shields.io/docker/stars/nbulai/ruby-chromedriver.svg)](https://hub.docker.com/r/nbulai/ruby-chromedriver/)
 
-Ruby 2.4, Chrome / [Chrome driver](https://sites.google.com/a/chromium.org/chromedriver/), NodeJS on 
+Ruby 2.x, Chrome / [Chrome driver](https://sites.google.com/a/chromium.org/chromedriver/), NodeJS on 
 Docker for [Capybara](https://github.com/teamcapybara/capybara)/[Cucumber](https://github.com/cucumber/cucumber) specs.
 
-Based on official Ruby 2.4 image and uses official stable Chrome repository. Uses X virtual framebuffer (Xvfb) for keycode conversions.
+Based on official Ruby 2.x image and uses official stable Chrome repository. Uses X virtual framebuffer (Xvfb) for keycode conversions.
 
 Can be used for Continuous Integration or Delivery (CI/CD) pipelines (like GitLab) instead of Qt and PhantomJS:
 
