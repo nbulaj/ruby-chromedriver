@@ -10,9 +10,9 @@ Based on official Ruby 2.x image and uses official stable Chrome repository. Use
 
 Can be used for Continuous Integration or Delivery (CI/CD) pipelines (like GitLab) instead of Qt and PhantomJS:
 
-# Configuration
+# CI/CD Configuration
 
-GitLab CI configuration for Ruby on Rails project + Cucumber using the image (read https://about.gitlab.com/2017/12/19/moving-to-headless-chrome/):
+Example of GitLab CI configuration for Ruby on Rails project with Cucumber using the image (read https://about.gitlab.com/2017/12/19/moving-to-headless-chrome/):
 
 ```yaml
 cucumber:
@@ -31,7 +31,11 @@ cucumber:
     - master
 ```
 
-Don't forget to configure your Cucumber/Capybara to use Chrome as a driver.
+If you need some specific screen size for testing, then you can pass it as an `SCREEN` environment variable (**only from 2.8**):
+
+`docker run -e SCREEN="1280x1024x16" -t -i --rm nbulai/ruby-chromedriver:latest bash`
+
+Don't forget to configure your Cucumber/Capybara to use Chrome as a driver (see instruction below).
 
 First install it locally to run your test-suite (if you will run tests on the dev machine):
 
