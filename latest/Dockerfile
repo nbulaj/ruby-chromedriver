@@ -3,7 +3,7 @@ FROM ruby:2.5
 MAINTAINER Nikita Bulai <bulaj.nikita@gmail.com>
 
 ENV DEBIAN_FRONTEND noninteractive
-ENV CHROMIUM_DRIVER_VERSION 2.43
+ENV CHROMIUM_DRIVER_VERSION 2.45
 
 # Install dependencies & Chrome
 RUN apt-get update && apt-get -y --no-install-recommends install zlib1g-dev liblzma-dev wget xvfb unzip libgconf2-4 libnss3 nodejs \
