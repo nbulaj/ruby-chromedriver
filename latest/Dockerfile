@@ -1,4 +1,5 @@
-FROM ruby:2.5
+# Ruby 2.5.3 doesn't force Bundler version
+FROM ruby:2.5.3
 
 MAINTAINER Nikita Bulai <bulaj.nikita@gmail.com>
 
