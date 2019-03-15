@@ -3,7 +3,7 @@
 [![Docker Pulls](https://img.shields.io/docker/pulls/nbulai/ruby-chromedriver.svg)](https://hub.docker.com/r/nbulai/ruby-chromedriver/)
 [![Docker Stars](https://img.shields.io/docker/stars/nbulai/ruby-chromedriver.svg)](https://hub.docker.com/r/nbulai/ruby-chromedriver/)
 
-Ruby 2.x, Chrome / [Chrome driver](https://sites.google.com/a/chromium.org/chromedriver/), NodeJS on 
+Ruby 2.6.x (for latest version), Chrome / [Chrome driver](https://sites.google.com/a/chromium.org/chromedriver/), NodeJS on 
 Docker for [Capybara](https://github.com/teamcapybara/capybara)/[Cucumber](https://github.com/cucumber/cucumber) specs.
 
 Based on official Ruby 2.x image and uses official stable Chrome repository. Uses X virtual framebuffer (Xvfb) for keycode conversions.

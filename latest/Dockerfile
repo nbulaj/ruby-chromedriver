@@ -1,5 +1,5 @@
-# Ruby 2.5.3 doesn't force Bundler version
-FROM ruby:2.5.3
+ARG RUBY_VERSION=2.6.2
+FROM ruby:${RUBY_VERSION}
 
 MAINTAINER Nikita Bulai <bulaj.nikita@gmail.com>
 
