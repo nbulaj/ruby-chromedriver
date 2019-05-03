@@ -4,8 +4,8 @@ FROM ruby:${RUBY_VERSION}
 MAINTAINER Nikita Bulai <bulaj.nikita@gmail.com>
 
 ENV DEBIAN_FRONTEND noninteractive
-ENV CHROMIUM_DRIVER_VERSION 73.0.3683.68
-ENV CHROME_VERSION 73.0.3683.75-1
+ENV CHROMIUM_DRIVER_VERSION 74.0.3729.6
+ENV CHROME_VERSION 74.0.3729.131-1
 
 # Install dependencies & Chrome
 RUN apt-get update && apt-get -y --no-install-recommends install zlib1g-dev liblzma-dev wget xvfb unzip libgconf2-4 libnss3 nodejs \
