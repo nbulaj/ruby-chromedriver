@@ -3,16 +3,18 @@
 [![Docker Pulls](https://img.shields.io/docker/pulls/nbulai/ruby-chromedriver.svg)](https://hub.docker.com/r/nbulai/ruby-chromedriver/)
 [![Docker Stars](https://img.shields.io/docker/stars/nbulai/ruby-chromedriver.svg)](https://hub.docker.com/r/nbulai/ruby-chromedriver/)
 
-Ruby 2.6.x (for latest version), Chrome / [Chrome driver](https://sites.google.com/a/chromium.org/chromedriver/), NodeJS on 
+Ruby 2.6.x, Chrome / [Chrome driver](https://sites.google.com/a/chromium.org/chromedriver/), NodeJS on 
 Docker for [Capybara](https://github.com/teamcapybara/capybara)/[Cucumber](https://github.com/cucumber/cucumber) specs.
 
-Based on official Ruby 2.x image and uses official stable Chrome repository. Uses X virtual framebuffer (Xvfb) for keycode conversions.
+Based on official Ruby 2.x image and uses official stable Chrome repository. Uses X virtual framebuffer (Xvfb)
+for keycode conversions.
 
 Can be used for Continuous Integration or Delivery (CI/CD) pipelines (like GitLab) instead of Qt and PhantomJS:
 
 # CI/CD Configuration
 
-Example of GitLab CI configuration for Ruby on Rails project with Cucumber using the image (read https://about.gitlab.com/2017/12/19/moving-to-headless-chrome/):
+Example of GitLab CI configuration for Ruby on Rails project with Cucumber using the image
+(read https://about.gitlab.com/2017/12/19/moving-to-headless-chrome/):
 
 ```yaml
 cucumber:
@@ -31,7 +33,7 @@ cucumber:
     - master
 ```
 
-If you need some specific screen size for testing, then you can pass it as an `SCREEN` environment variable (**only from 2.8**):
+If you need some specific screen size for testing, then you can pass it as an `SCREEN` environment variable:
 
 `docker run -e SCREEN="1280x1024x16" -t -i --rm nbulai/ruby-chromedriver:latest bash`
 
@@ -87,4 +89,4 @@ That's all. Run `bin/cucumber` to check your tests.
 
 This repo content is released under the [MIT License](http://www.opensource.org/licenses/MIT).
 
-Copyright (c) 2017-2018 Nikita Bulai (bulajnikita@gmail.com).
+Copyright (c) 2017-2019 Nikita Bulai (bulajnikita@gmail.com).
