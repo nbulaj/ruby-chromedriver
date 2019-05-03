@@ -18,7 +18,8 @@ RUN apt-get update && apt-get -y --no-install-recommends install zlib1g-dev libl
 RUN wget -O /tmp/chromedriver.zip http://chromedriver.storage.googleapis.com/$CHROMIUM_DRIVER_VERSION/chromedriver_linux64.zip \
     && unzip /tmp/chromedriver.zip chromedriver -d /usr/bin/ \
     && rm /tmp/chromedriver.zip \
-    && chmod ugo+rx /usr/bin/chromedriver
+    && chmod ugo+rx /usr/bin/chromedriver \
+    && apt-mark hold google-chrome-stable
 
 ADD docker-entrypoint.sh /
 ENTRYPOINT ["/docker-entrypoint.sh"]
