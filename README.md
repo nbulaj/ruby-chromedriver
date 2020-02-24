@@ -89,4 +89,4 @@ That's all. Run `bin/cucumber` to check your tests.
 
 This repo content is released under the [MIT License](http://www.opensource.org/licenses/MIT).
 
-Copyright (c) 2017-2019 Nikita Bulai (bulajnikita@gmail.com).
+Copyright (c) 2017-2020 Nikita Bulai (bulajnikita@gmail.com).
