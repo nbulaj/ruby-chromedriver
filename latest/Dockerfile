@@ -1,16 +1,16 @@
-ARG RUBY_VERSION=2.6.2
+ARG RUBY_VERSION=3.1.2
 FROM ruby:${RUBY_VERSION}
 
 MAINTAINER Nikita Bulai <bulaj.nikita@gmail.com>
 
 ENV DEBIAN_FRONTEND noninteractive
-ENV CHROMIUM_DRIVER_VERSION 80.0.3987.106
-ENV CHROME_VERSION 80.0.3987.116-1
+ENV CHROMIUM_DRIVER_VERSION 102.0.5005.61
+ENV CHROME_VERSION 102.0.5005.115-1
 
 # Install dependencies & Chrome
-RUN apt-get update && apt-get -y --no-install-recommends install zlib1g-dev liblzma-dev wget xvfb unzip libgconf2-4 libnss3 nodejs \
+RUN apt-get update && apt-get -y --no-install-recommends install zlib1g-dev liblzma-dev wget xvfb unzip libgconf-2-4 libnss3 nodejs \
  && wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -  \
- && echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list \
+ && echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list \
  && apt-get update && apt-get -y --no-install-recommends install google-chrome-stable=$CHROME_VERSION \
  && rm -rf /var/lib/apt/lists/*
 
