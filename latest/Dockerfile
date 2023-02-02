@@ -1,11 +1,11 @@
-ARG RUBY_VERSION=3.1.2
+ARG RUBY_VERSION=3.1.3
 FROM ruby:${RUBY_VERSION}
 
 MAINTAINER Nikita Bulai <bulaj.nikita@gmail.com>
 
 ENV DEBIAN_FRONTEND noninteractive
-ENV CHROMIUM_DRIVER_VERSION 102.0.5005.61
-ENV CHROME_VERSION 102.0.5005.115-1
+ENV CHROMIUM_DRIVER_VERSION 109.0.5414.74
+ENV CHROME_VERSION 109.0.5414.119-1
 
 # Install dependencies & Chrome
 RUN apt-get update && apt-get -y --no-install-recommends install zlib1g-dev liblzma-dev wget xvfb unzip libgconf-2-4 libnss3 nodejs \

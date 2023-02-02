@@ -3,7 +3,7 @@
 [![Docker Pulls](https://img.shields.io/docker/pulls/nbulai/ruby-chromedriver.svg)](https://hub.docker.com/r/nbulai/ruby-chromedriver/)
 [![Docker Stars](https://img.shields.io/docker/stars/nbulai/ruby-chromedriver.svg)](https://hub.docker.com/r/nbulai/ruby-chromedriver/)
 
-Ruby 2.6.x, Chrome / [Chrome driver](https://sites.google.com/a/chromium.org/chromedriver/), NodeJS on 
+Ruby 3.1.x, Chrome / [Chrome driver](https://sites.google.com/chromium.org/driver/), NodeJS on 
 Docker for [Capybara](https://github.com/teamcapybara/capybara)/[Cucumber](https://github.com/cucumber/cucumber) specs.
 
 Based on official Ruby 2.x image and uses official stable Chrome repository. Uses X virtual framebuffer (Xvfb)
@@ -89,4 +89,4 @@ That's all. Run `bin/cucumber` to check your tests.
 
 This repo content is released under the [MIT License](http://www.opensource.org/licenses/MIT).
 
-Copyright (c) 2017-2020 Nikita Bulai (bulajnikita@gmail.com).
+Copyright (c) 2017- Nikita Bulai (bulajnikita@gmail.com).
