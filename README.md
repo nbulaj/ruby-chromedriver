@@ -6,7 +6,7 @@
 Ruby 3.1.x, Chrome / [Chrome driver](https://sites.google.com/chromium.org/driver/), NodeJS on 
 Docker for [Capybara](https://github.com/teamcapybara/capybara)/[Cucumber](https://github.com/cucumber/cucumber) specs.
 
-Based on official Ruby 2.x image and uses official stable Chrome repository. Uses X virtual framebuffer (Xvfb)
+Based on official Ruby image and uses official stable Chrome repository. Uses X virtual framebuffer (Xvfb)
 for keycode conversions.
 
 Can be used for Continuous Integration or Delivery (CI/CD) pipelines (like GitLab) instead of Qt and PhantomJS:
@@ -30,7 +30,7 @@ cucumber:
     paths:
       - coverage/
   only:
-    - master
+    - main
 ```
 
 If you need some specific screen size for testing, then you can pass it as an `SCREEN` environment variable:
