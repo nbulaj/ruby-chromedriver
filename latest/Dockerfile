@@ -8,6 +8,7 @@ ENV CHROMIUM_DRIVER_VERSION 109.0.5414.74
 ENV CHROME_VERSION 109.0.5414.119-1
 
 # Install dependencies & Chrome
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN apt-get update && apt-get -y --no-install-recommends install zlib1g-dev liblzma-dev wget xvfb unzip libgconf-2-4 libnss3 nodejs \
  && wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -  \
  && echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list \
